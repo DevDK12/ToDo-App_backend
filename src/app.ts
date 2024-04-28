@@ -7,7 +7,7 @@ import globalError from './middlewares/globalError.js';
 
 import authRouter from './routes/auth.js';
 import userRouter from './routes/user.js';
-import testingRouter from './routes/testing.js';
+import taskRouter from './routes/task.js';
 
 
 
@@ -49,13 +49,12 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 
 
-app.use('/uploads', express.static('uploads'));
 
 
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/user', userRouter);
+app.use('/api/v1/task', taskRouter);
 
-app.use('/api/v1/testing', testingRouter);
 
 
 
